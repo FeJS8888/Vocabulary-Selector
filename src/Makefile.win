@@ -1,0 +1,45 @@
+# Project: English
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = English_private.res
+OBJ      = main.o Base.o Collision.o Element.o Widget.o $(RES)
+LINKOBJ  = main.o Base.o Collision.o Element.o Widget.o $(RES)
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -L"C:/Users/LENOVO/Desktop/C++/NOI/EGE24.04/lib/devcpp" -lgraphics -lgdi32 -lgdiplus -lcomdlg32 -mwindows
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/LENOVO/Desktop/C++/NOI/EGE24.04/include"
+BIN      = English.exe
+CXXFLAGS = $(CXXINCS) -std=c++14 -Ofast -g -DFPS
+CFLAGS   = $(INCS) -std=c++14 -Ofast -g -DFPS
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Base.o: Base.cpp
+	$(CPP) -c Base.cpp -o Base.o $(CXXFLAGS)
+
+Collision.o: Collision.cpp
+	$(CPP) -c Collision.cpp -o Collision.o $(CXXFLAGS)
+
+Element.o: Element.cpp
+	$(CPP) -c Element.cpp -o Element.o $(CXXFLAGS)
+
+Widget.o: Widget.cpp
+	$(CPP) -c Widget.cpp -o Widget.o $(CXXFLAGS)
+
+English_private.res: English_private.rc 
+	$(WINDRES) -i English_private.rc --input-format=rc -o English_private.res -O coff 
+

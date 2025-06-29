@@ -1,0 +1,23 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT ! */
+
+#ifndef ENGLISH_PRIVATE_H
+#define ENGLISH_PRIVATE_H
+
+/* VERSION DEFINITIONS */
+#define VER_STRING	"1.1.0.0"
+#define VER_MAJOR	1
+#define VER_MINOR	1
+#define VER_RELEASE	0
+#define VER_BUILD	0
+#define COMPANY_NAME	""
+#define FILE_VERSION	"1.1.0.0"
+#define FILE_DESCRIPTION	"Developed By FeJS8888 A17"
+#define INTERNAL_NAME	""
+#define LEGAL_COPYRIGHT	"MIT"
+#define LEGAL_TRADEMARKS	""
+#define ORIGINAL_FILENAME	""
+#define PRODUCT_NAME	"Vocabulary Selector"
+#define PRODUCT_VERSION	"1.1.0.0"
+
+#endif /*ENGLISH_PRIVATE_H*/
